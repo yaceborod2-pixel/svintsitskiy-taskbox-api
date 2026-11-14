@@ -8,6 +8,8 @@ dependencies = [
     "fastapi[standard]>=0.162.5",
 ]
 
+
+
 [project.scripts]
 svintsitskiy-taskbox-api = "svintsitskiy_taskbox_api:main"
 
