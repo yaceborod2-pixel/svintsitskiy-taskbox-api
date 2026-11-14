@@ -22,7 +22,7 @@ def get_user(user_id: int):
     }
 
 @router.delete("/users/{user_id}")
-def get_user(user_id: int):
+def delete_user(user_id: int):
     if user_id < 0 or user_id >= len(users):
         raise HTTPException(status_code=404, detail="User not found")
     
