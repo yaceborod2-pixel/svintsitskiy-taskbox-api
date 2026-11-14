@@ -22,25 +22,25 @@ class User:
         for user_data in users_db:
             if user_data.get("id") == user_id:
                 return self(
-                    id=user_data.get("id"),
-                    name=user_data.get("name"),
-                    age=user_data.get("age"),
+                    _id=user_data.get("id"),
+                    _name=user_data.get("name"),
+                    _age=user_data.get("age"),
                 )
 
     @classmethod
     def get_users(self):
         return [
             self(
-                id=user_data.get("id"),
-                name=user_data.get("name"),
-                age=user_data.get("age"),
+                _id=user_data.get("id"),
+                _name=user_data.get("name"),
+                _age=user_data.get("age"),
             )
             for user_data in users_db
         ]
         
     @classmethod
     def delete_user_by_id(self, user_id):
-        for index, user_data in enumerate(user_data):
+        for index, user_data in enumerate(users_db):
             if user_data.get("id") == user_id:
                 del users_db[index]
                 return True
