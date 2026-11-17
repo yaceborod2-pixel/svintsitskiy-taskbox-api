@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi[standard]>=0.162.5",
+    "sqlalchemy>=2.1.9",
 ]
 
 [tool.uv.build-backend]
